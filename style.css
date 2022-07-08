@@ -1,0 +1,164 @@
+* {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+header {
+    background-color: rgba(0, 255, 0, 0.3);
+    display: flex;
+    padding: 10px;
+}
+
+.logoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+body {
+    margin: auto;
+    max-width: min-content;
+    background-image: url(./Images/bg.jpg);
+    background-repeat: repeat-y;
+}
+
+ul {
+    display: flex;
+    float: right;
+    margin-right: 10px;
+    margin: 5px;
+}
+
+.ulFooter {
+    display: flex;
+    flex-direction: column;
+    padding: inherit;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+li:hover {
+    cursor: pointer;
+    border-bottom: 1px white solid;
+}
+
+main {
+    padding: 10px;
+}
+
+.mainImgs {
+    display: flex;
+
+}
+
+.mainImgs div {
+
+    width: 220px;
+}
+
+main img {
+    width: 150px;
+}
+
+footer {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    background-color: ghostwhite;
+}
+
+.divButton {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto 10px auto;
+}
+
+.button {
+    background-color: green;
+    color: white;
+    font-size: larger;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 32px;
+
+    animation: myAnim 2s ease 0s infinite normal forwards;
+
+}
+
+.div7dias {
+    display: flex;
+}
+
+.texto7dias {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ANIMACOES */
+
+@keyframes myAnim {
+    0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+    }
+
+    10% {
+        animation-timing-function: ease-in;
+        transform: scale(0.91);
+    }
+
+    17% {
+        animation-timing-function: ease-out;
+        transform: scale(0.98);
+    }
+
+    33% {
+        animation-timing-function: ease-in;
+        transform: scale(0.87);
+    }
+
+    45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+    }
+}
+
+
+/* Responsividade Mobile */
+
+@media screen and (max-width: 750px) {
+
+    .mainImgs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mainImgs div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        max-width: none;
+        margin: 10px;
+    }
+
+    .div7dias {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
