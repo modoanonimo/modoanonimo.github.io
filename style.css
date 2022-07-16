@@ -45,6 +45,7 @@ ul {
     float: right;
     margin-right: 10px;
     margin: 5px;
+    padding: 0;
 }
 
 .ulFooter {
@@ -56,6 +57,8 @@ ul {
 li {
     list-style-type: none;
     padding: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 
 li:hover {
