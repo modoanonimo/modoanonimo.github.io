@@ -1,6 +1,19 @@
 * {
     font-family: 'Kdam Thmor Pro', sans-serif;
+}
 
+@font-face {
+    font-family: sevenMonkey;
+    src: url(./Images/seven-monkey-fury-bb.regular.ttf);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 header {
@@ -13,6 +26,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 h2 {
@@ -63,8 +77,9 @@ main {
     width: 220px;
 }
 
-main img {
+.mainImgs img {
     width: 150px;
+    padding: 5px;
 }
 
 footer {
@@ -81,6 +96,10 @@ footer {
     margin: 10px auto 10px auto;
 }
 
+.divButton:hover {
+    cursor: pointer;
+}
+
 .button {
     background-color: green;
     color: white;
@@ -93,8 +112,13 @@ footer {
 
 }
 
+.button:hover {
+    cursor: pointer;
+}
+
 .div7dias {
     display: flex;
+    background-color: rgba(17, 0, 255, 0.711);
 }
 
 .texto7dias {
@@ -104,6 +128,38 @@ footer {
     align-items: center;
 }
 
+#contatodiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(17, 0, 255, 0.711);
+}
+
+#comofuncionadiv {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.containercomofunciona {
+    display: flex;
+}
+
+#depoimentos {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+#depoimentos img {
+    width: 250px;
+    margin: 5px;
+}
+
+.depoImgs {
+    display: flex;
+}
 
 /* ANIMACOES */
 
@@ -158,6 +214,15 @@ footer {
 
     .div7dias {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .containercomofunciona {
+        flex-direction: column;
+    }
+
+    .depoImgs {
         flex-direction: column;
         align-items: center;
     }
