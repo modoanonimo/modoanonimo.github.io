@@ -30,7 +30,7 @@ header {
 }
 
 h2 {
-    font-weight: 500;
+    font-weight: bold;
 }
 
 body {
@@ -72,6 +72,7 @@ main {
 
 .mainImgs {
     display: flex;
+    justify-content: space-around;
 
 }
 
@@ -131,22 +132,17 @@ footer {
     align-items: center;
 }
 
+#comofuncionadiv {
+    display: flex;
+    flex-direction: column;
+}
+
 #contatodiv {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgba(17, 0, 255, 0.711);
-}
-
-#comofuncionadiv {
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-}
-
-.containercomofunciona {
-    display: flex;
 }
 
 #depoimentos {
@@ -156,12 +152,18 @@ footer {
 }
 
 #depoimentos img {
-    width: 250px;
+    width: 210px;
     margin: 5px;
 }
 
 .depoImgs {
     display: flex;
+}
+
+#acessoatudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ANIMACOES */
@@ -228,5 +230,9 @@ footer {
     .depoImgs {
         flex-direction: column;
         align-items: center;
+    }
+
+    .divcomo {
+        flex-direction: column;
     }
 }
