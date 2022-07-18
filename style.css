@@ -166,6 +166,7 @@ footer {
     align-items: center;
 }
 
+
 /* ANIMACOES */
 
 @keyframes myAnim {
@@ -235,4 +236,9 @@ footer {
     .divcomo {
         flex-direction: column;
     }
+
+    #acessoatudo img {
+        width: 100%;
+    }
+    
 }
