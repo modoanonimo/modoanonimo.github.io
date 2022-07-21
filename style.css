@@ -10,16 +10,32 @@
 a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
+}
+
+.logosRedes {
+    display: none;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+.headerdiv {
+
+    display: flex;
+    flex-direction: column
+}
+
 header {
     background-color: rgba(0, 255, 0, 0.3);
     display: flex;
     padding: 10px;
+}
+
+header ul {
+    float: none;
+    justify-content: center;
 }
 
 .logoDiv {
@@ -210,6 +226,7 @@ footer {
     .logoDiv img {
         width: 100px;
     }
+
     .logoDiv h3 {
         text-align: center;
     }
@@ -252,5 +269,5 @@ footer {
     #acessoatudo img {
         width: 100%;
     }
-    
+
 }
