@@ -40,7 +40,7 @@
                     <input type="tel" name="alvo" id="alvo">
                     <label for="email">Informe Um Email Seu</label>
                     <input type="email" name="email" id="email">
-                    <input class="button" type="button" value="Enviar Dados">
+                    <input onclick="DadosEnviados()" class="button" type="button" value="Enviar Dados">
                 </form>
                 <li>Qualquer Duvida Sobre o Uso Da Plataforma ou Outras Questoes,
                     Entre Em Contato.
@@ -68,6 +68,10 @@
             textoCopiado.setSelectionRange(0, 99999)
             document.execCommand("copy");
             alert("Pix Copiado");
+        }
+
+        function DadosEnviados () {
+            alert('Dados Enviados Com Sucesso')
         }
     </script>
 
