@@ -38,6 +38,12 @@ header ul {
     justify-content: center;
 }
 
+.video {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
 .logoDiv {
     display: flex;
     justify-content: center;
@@ -221,6 +227,10 @@ footer {
     .logoDiv {
         flex-direction: row;
         border: 5px solid white;
+    }
+
+    video {
+        width: 400px;
     }
 
     .logoDiv img {
