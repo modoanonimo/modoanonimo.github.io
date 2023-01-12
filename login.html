@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <script src="./login.js"></script>
+    <title>Login Espiao </title>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <div class="logo-login">
+            <img src="./Images/olho_espiao-removebg-preview.png
+            " alt="foto slogan">
+        </div>
+        <h2>Espiao - Modo Anonimo</h2>
+        <form>
+            <div class="user-box">
+                <input onkeypress="userempty.innerHTML = ''" type="text" name="user" class="user" required="">
+                <label>E-Mail</label>
+                <div class="userempty" id="userempty" style="color: red;"></div>
+            </div>
+            <div class="user-box">
+                <input type="password" class="password" onkeypress="passwordempty.innerHTML = '' " name="" required="">
+                <label>Senha</label>
+                <div class="passwordempty" id="passwordempty" style="color: red;"></div>
+            </div>
+            <a href="#" onclick="Logar(event)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Entrar
+            </a>
+        </form>
+    </div>
+
+</body>
+
+</html>
