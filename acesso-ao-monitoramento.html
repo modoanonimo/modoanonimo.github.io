@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <script defer>localStorage.getItem("ID");</script>
-        <!-- <div class="menu">
+
+    <!-- <div class="menu">
             <ul>
                 <li>Whatsapp</li>
                 <li>Instagram</li>
@@ -23,22 +23,39 @@
                 <li></li>
             </ul>
         </div> -->
+    <header id="header" style="display: none;">
+        <h1>Acesso Bloqueado</h1>
+    </header>
 
-        <main>
-            <div>
-                <h1>Estamos Preparando Seu Monitoramento</h1>
-            </div>
-            <div>
-                <h3>Por Favor Aguarde</h3>
-            </div>
-            <div class="loading">Loading&#8230;</div>
-            <div>
-                <h3>Sabemos que esta Ansioso(a)</h3>
-            </div>
-            <div>
-                <h5>Quando Seu Monitoramento Estiver Liberado Iremos Avisar No Seu E-mail !</h5>
-            </div>
-        </main>
+    <main id="main">
+        <div>
+            <h1>Estamos Preparando Seu Monitoramento</h1>
+        </div>
+        <div>
+            <h3>Por Favor Aguarde</h3>
+        </div>
+        <div class="loading">Loading&#8230;</div>
+        <div>
+            <h3>Sabemos que esta Ansioso(a)</h3>
+        </div>
+        <div>
+            <h3>Caso Ainda Nao Tenha Realizado o Pagamento, Envie o Comprovante Para Nossa Central De Atendimento </h3>
+            <h4>Quando Seu Monitoramento Estiver Liberado Iremos Avisar No Seu E-mail !</h4>
+        </div>
+    </main>
+
+    <script defer>
+
+        localStorage.getItem("Liberado");
+
+        if (!localStorage.getItem('Liberado')) {
+
+            document.querySelector("#main").style.display = "none";
+            document.querySelector("#header").style.display = "block";
+
+        }
+
+    </script>
 
 </body>
 
