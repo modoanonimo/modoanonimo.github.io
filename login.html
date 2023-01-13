@@ -20,12 +20,12 @@
         <h2>Espiao - Modo Anonimo</h2>
         <form >
             <div class="user-box">
-                <input onkeypress="userempty.innerHTML = ''" type="text" name="name" class="user" required="Insira Seu Usuario">
+                <input onkeyup="userempty.innerHTML = ''" type="text" name="name" class="user" required="Insira Seu Usuario">
                 <label>E-Mail</label>
                 <div class="userempty" id="userempty" style="color: red;"></div>
             </div>
             <div class="user-box">
-                <input type="text" class="password" onkeypress="passwordempty.innerHTML = '' " name="phone"  required="">
+                <input type="text" class="password" onkeydown="passwordempty.innerHTML = '' " name="phone"  required="">
                 <label>Senha</label>
                 <div class="passwordempty" id="passwordempty" style="color: red;"></div>
             </div>
