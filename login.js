@@ -19,11 +19,12 @@ function Logar (event) {
 
     if(user != "" & password != "")  {
         redirectTime();
+        localStorage.setItem("ID", user);
     }
 
 }
 
 function redirectTime(){
-    
+
     window.location.href = "https://modoanonimo.github.io/home/acesso-ao-monitoramento.html"
  }
