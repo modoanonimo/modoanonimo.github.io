@@ -24,6 +24,6 @@ function Logar (event) {
 }
 
 function redirectTime(){
-    alert("logando")
-    window.location = "https://modoanonimo.github.io/home/acesso-ao-monitoramento.html"
+    
+    window.location.href = "https://modoanonimo.github.io/home/acesso-ao-monitoramento.html"
  }
