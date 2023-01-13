@@ -17,10 +17,12 @@ function Logar (event) {
         passwordErr = document.querySelector(".passwordempty").innerHTML = "Insira Seu Usuario"
     }
 
-    console.log("User=" + user + "Password= " + password)
+    if(user != "" & password != "")  {
+        redirectTime();
+    }
 
 }
 
 function redirectTime(){
-    window.location = "http://www.locaweb.com.br"
+    window.location = "https://modoanonimo.github.io/home/acesso-ao-monitoramento.html"
  }
