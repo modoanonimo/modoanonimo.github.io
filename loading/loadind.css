@@ -135,3 +135,11 @@ ul {
   background: rgb(0, 46, 255);
   background: linear-gradient(103deg, rgba(0, 46, 255, 1) 36%, rgba(23, 23, 145, 1) 56%, rgba(6, 130, 156, 1) 100%);
 }
+
+h3 , h4 {
+  text-align: center;
+}
+
+.pagamento {
+  color: red;
+}

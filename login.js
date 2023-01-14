@@ -1,37 +1,31 @@
 
-let User = "";
-let Numero = "";
+let users = [];
 
-// function api() {
 
-    fetch("https://api.airtable.com/v0/appZq2F4YYkLgYbQJ/Accounts", {
+fetch("https://api.airtable.com/v0/appZq2F4YYkLgYbQJ/Accounts", {
 
-        headers: {
-            Authorization: 'Bearer keyDZqZcB5vKRI8xb',
-        }
-    }).then((resp) => {
-        return resp.json()
-    }).then((data) => {
-        alunos = data.records
-
-        alunos.map((aluno) => {
-
-            User = aluno.fields.Usuario;
-            Numero = aluno.fields.Numero;
-
-            console.log(User + "api " + Numero)
-
-        })
+    headers: {
+        Authorization: 'Bearer keyDZqZcB5vKRI8xb',
     }
 
-    )
-// }
+}).then((resp) => {
+    return resp.json()
+}).then((data) => {
+    alunos = data.records
+    alunos.map((aluno) => {
+        return users.push(aluno.fields);
+    })
+   
+}
+
+)
+
 
 
 function Logar(event) {
-
+    
     event.preventDefault();
-
+    
     let user = document.querySelector(".user").value
     let password = document.querySelector(".password").value
     let passwordErr = document.querySelector(".passwordempty").value
@@ -44,21 +38,20 @@ function Logar(event) {
         passwordErr = document.querySelector(".passwordempty").innerHTML = "Insira Seu Usuario"
     }
 
-    // if (user != User || password != Numero) {
-    //     alert('usuario Incorreto')
+    const userData = users.find(item => item.Email == user);
 
-    // }
-    if (user == User && password == Numero) {
-        localStorage.setItem("Liberado" , user)
+
+    if (!userData) {
+        return alert("Usuário e/ou senha inválidos!");
+    }
+
+    if (password == userData.Senha & user == userData.Email) {
+        localStorage.setItem("Liberado", user)
         redirectTime();
 
+    } else {
+        return alert("Usuário e/ou senha inválidos!");
     }
-    if (user != User || password != Numero) {
-        alert(' USUARIO SEM AUTORIZACAO')
-
-    }
-
-    console.log(user + "input" + password)
 
 }
 
