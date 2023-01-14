@@ -11,7 +11,13 @@
 
 <body>
 
-    <!-- <div class="menu">
+    <script>let NomeUser = localStorage.getItem("Liberado").toUpperCase()
+
+    
+    </script>
+<!--     
+    
+    <div class="menu">
             <ul>
                 <li>Whatsapp</li>
                 <li>Instagram</li>
@@ -22,13 +28,14 @@
                 <li></li>
                 <li></li>
             </ul>
-        </div> -->
+        </div>  -->
     <header id="header" style="display: none;">
         <h1>Acesso Nao Permitido</h1>
     </header>
 
     <main id="main">
         <div>
+            <h2 id="Nomeuser"></h2>
             <h1>Estamos Preparando Seu Monitoramento</h1>
         </div>
         <div>
@@ -47,6 +54,7 @@
     <script defer>
 
         localStorage.getItem("Liberado");
+        document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
 
         if (!localStorage.getItem('Liberado')) {
 
