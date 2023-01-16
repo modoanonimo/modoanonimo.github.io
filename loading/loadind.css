@@ -298,12 +298,27 @@ a {
 }
 
 .apps img:hover {
-  border: black 5px solid;
+  /* border: black 5px solid; */
   cursor: pointer;
 }
 
-footer h2 {
+.lock {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+.lock:hover {
+  opacity: 1;
+}
+
+footer{
+  background-color: black;
+  color: orangered;
+}
+
+footer h2,h1  {
   text-align: center;
+  margin-top: auto;
 }
 footer p {
   text-align: end;
