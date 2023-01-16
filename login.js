@@ -49,6 +49,7 @@ function Logar(event) {
     if (password == userData.Senha & user == userData.Email) {
         localStorage.setItem("Liberado", user)
         localStorage.setItem("Senha", password)
+        localStorage.setItem("Nome",userData.Nome)
         redirectTime();
 
     } else {

@@ -88,6 +88,14 @@ li:hover {
     border-bottom: 1px white solid;
 }
 
+.loginButton {
+    background-color: black;
+    color: orangered;
+}
+.loginButton a {
+    color: orangered;
+}
+
 main {
     padding: 10px;
 }
