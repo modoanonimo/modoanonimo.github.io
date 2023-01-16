@@ -97,11 +97,12 @@
             document.querySelector(".footer").style.display = "none";
             document.querySelector("#header").style.display = "block";
 
+        } else {
+
+            let NomeUser = localStorage.getItem("Liberado").toUpperCase()
+
+            document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
         }
-
-        document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
-
-        let NomeUser = localStorage.getItem("Liberado").toUpperCase()
 
     </script>
 
