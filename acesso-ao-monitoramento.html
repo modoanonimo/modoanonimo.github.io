@@ -11,8 +11,6 @@
 
 <body>
 
-    <script>let NomeUser = localStorage.getItem("Liberado").toUpperCase() </script>
-
     <header id="header" style="display: none;">
         <h1>Acesso Nao Permitido</h1>
     </header>
@@ -69,21 +67,21 @@
         </div>
     </main>
     <div class="apps">
-        <img src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="Whatsapp" >
-        <img src="./Images/Apps/reshot-icon-gps-DC4P596KL8.svg" alt="GPS" >
-        <img src="./Images/Apps/reshot-icon-instagram-DM5FP6S9N2.svg" alt="Instagram" >
+        <img src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="Whatsapp">
+        <img src="./Images/Apps/reshot-icon-gps-DC4P596KL8.svg" alt="GPS">
+        <img src="./Images/Apps/reshot-icon-instagram-DM5FP6S9N2.svg" alt="Instagram">
         <img src="./Images/Apps/reshot-icon-facebook-square-GCAE9R73J5.svg" alt="Facebook">
-        <img src="./Images/Apps/reshot-icon-messenger-82S9U6ZBLD.svg" alt="Messenger" >
-        <img src="./Images/Apps/reshot-icon-twitter-4EAXDHGYM5.svg" alt="Twitter" >
-        <img src="./Images/Apps/reshot-icon-dslr-camera-V6ZC43YHM9.svg" alt="Camera" >
-        <img src="./Images/Apps/reshot-icon-microphone-WA2KD7M5JC.svg" alt="Microfone" >
-        <img src="./Images/Apps/reshot-icon-sms-notification-SK7C6ZGUF4.svg" alt="SMS" >
-        <img src="./Images/Apps/chrome.jpg" alt="Navegador" >
+        <img src="./Images/Apps/reshot-icon-messenger-82S9U6ZBLD.svg" alt="Messenger">
+        <img src="./Images/Apps/reshot-icon-twitter-4EAXDHGYM5.svg" alt="Twitter">
+        <img src="./Images/Apps/reshot-icon-dslr-camera-V6ZC43YHM9.svg" alt="Camera">
+        <img src="./Images/Apps/reshot-icon-microphone-WA2KD7M5JC.svg" alt="Microfone">
+        <img src="./Images/Apps/reshot-icon-sms-notification-SK7C6ZGUF4.svg" alt="SMS">
+        <img src="./Images/Apps/chrome.jpg" alt="Navegador">
 
     </div>
 
-    
-    <footer>
+
+    <footer class="footer">
 
         <h1>System Fox</h1>
         <h2>Todos os Direitos Reservados</h2>
@@ -92,15 +90,18 @@
     </footer>
     <script defer>
 
-        localStorage.getItem("Liberado");
-        document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
-
         if (!localStorage.getItem('Liberado')) {
 
             document.querySelector("#main").style.display = "none";
+            document.querySelector(".apps").style.display = "none";
+            document.querySelector(".footer").style.display = "none";
             document.querySelector("#header").style.display = "block";
 
         }
+
+        document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
+
+        let NomeUser = localStorage.getItem("Liberado").toUpperCase()
 
     </script>
 
