@@ -42,7 +42,8 @@ function Logar(event) {
 
 
     if (!userData) {
-        return alert("Usuário e/ou senha inválidos!");
+        // return alert("Usuário e/ou senha inválidos!");
+        document.querySelector(".errorUser").style.display = "block";
     }
 
     if (password == userData.Senha & user == userData.Email) {
@@ -51,7 +52,8 @@ function Logar(event) {
         redirectTime();
 
     } else {
-        return alert("Usuário e/ou senha inválidos!");
+        // return alert("Usuário e/ou senha inválidos!");
+        document.querySelector(".errorUser").style.display = "block";
     }
 
 }
@@ -61,5 +63,9 @@ function redirectTime() {
     window.location.href = "./acesso-ao-monitoramento.html"
 }
 
+
+function closeAlert() {
+    document.querySelector(".errorUser").style.display = "none";
+}
 
 

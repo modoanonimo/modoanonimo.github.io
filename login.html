@@ -12,12 +12,26 @@
 
 <body>
 
+    <div class="errorUser">
+        <div>
+            <h1>Usuario ou Senha Invalidos</h1>
+            <h2>ou</h2>
+            <h1>Voce Nao Tem Monitoramento Ativo</h1>
+            <h2>Para Contratar seu Plano Entre em Contato Conosco</h2>
+        </div>
+
+        <div class="alertButtons">
+            <button><a href="https://api.whatsapp.com/send?phone=5555999577650" target="_blank" rel="noopener noreferrer">Entrar Em Contato</a></button>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
     <div class="login-box">
         <div class="logo-login">
             <img src="./Images/olho_espiao-removebg-preview.png
             " alt="foto slogan">
         </div>
-        <h2>Espiao - Modo Anonimo</h2>
+        <h2>Espião - Modo Anonimo</h2>
         <form >
             <div class="user-box">
                 <input onkeyup="userempty.innerHTML = ''" type="text" name="name" class="user" required="Insira Seu Usuario" autocomplete="off">

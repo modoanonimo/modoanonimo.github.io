@@ -11,46 +11,85 @@
 
 <body>
 
-    <script>let NomeUser = localStorage.getItem("Liberado").toUpperCase()
+    <script>let NomeUser = localStorage.getItem("Liberado").toUpperCase() </script>
 
-    
-    </script>
-<!--     
-    
-    <div class="menu">
-            <ul>
-                <li>Whatsapp</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>  -->
     <header id="header" style="display: none;">
         <h1>Acesso Nao Permitido</h1>
     </header>
 
     <main id="main">
-        <div>
-            <h2 id="Nomeuser"></h2>
-            <h1>Estamos Preparando Seu Monitoramento</h1>
+        <div class="menuHiden">
+            <div class="menuHamburguer">
+                <input type="checkbox" id="checkbox-menu" />
+                <label class="headerLabel" htmlFor="checkbox-menu">
+                    <span class="span1"></span>
+                    <span class="span1"></span>
+                    <span class="span1"></span>
+                </label>
+            </div>
+
+            <div class="menuResponsivo">
+                <img src="./Images/logo-fox.jpg" alt="Logo System Fox">
+                <ul>
+
+                    <li>WhatsApp</li>
+                    <li>Instagram</li>
+                    <li>Facebook</li>
+                    <li>Localizacao</li>
+                    <li>SMS</li>
+                    <li>Camera</li>
+                    <li>Microfone</li>
+                    <li>Navegadores Web</li>
+                    <li>YouTube</li>
+                    <li>Aplicativos Executados</li>
+                    <li>Servicos</li>
+                </ul>
+
+            </div>
         </div>
-        <div>
-            <h3>Por Favor Aguarde</h3>
-        </div>
-        <div class="loading">Loading&#8230;</div>
-        <div>
-            <h3>Sabemos que esta Ansioso(a)</h3>
-        </div>
-        <div>
-            <h3 class="pagamento">Caso Ainda Nao Tenha Realizado o Pagamento, Envie o Comprovante Para Nossa Central De Atendimento </h3>
-            <h4>Quando Seu Monitoramento Estiver Liberado Iremos Avisar No Seu E-mail !</h4>
+
+        <div class="painel">
+            <div class="painelHeader">
+                <h3>System Fox by Modo Anonimo</h3>
+            </div>
+            <div>
+                <h2 id="Nomeuser"></h2>
+            </div>
+            <div>
+                <h3>Carregando ...</h3>
+            </div>
+            <div class="loading">Loading&#8230;</div>
+
+            <div>
+                <h3 class="pagamento">Por favor, Verifique Se Nosso Aplicativo Esta Instalado Corretamente em seu
+                    Aparelho </h3>
+                <h3 class="pagamento">Caso Tenha Duvida Ou Dificuldade, Contate Seu Consultor</h3>
+                <h4>Quando Seu Monitoramento Estiver Liberado Iremos Avisar No Seu E-mail !</h4>
+            </div>
         </div>
     </main>
+    <div class="apps">
+        <img src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="Whatsapp" >
+        <img src="./Images/Apps/reshot-icon-gps-DC4P596KL8.svg" alt="GPS" >
+        <img src="./Images/Apps/reshot-icon-instagram-DM5FP6S9N2.svg" alt="Instagram" >
+        <img src="./Images/Apps/reshot-icon-facebook-square-GCAE9R73J5.svg" alt="Facebook">
+        <img src="./Images/Apps/reshot-icon-messenger-82S9U6ZBLD.svg" alt="Messenger" >
+        <img src="./Images/Apps/reshot-icon-twitter-4EAXDHGYM5.svg" alt="Twitter" >
+        <img src="./Images/Apps/reshot-icon-dslr-camera-V6ZC43YHM9.svg" alt="Camera" >
+        <img src="./Images/Apps/reshot-icon-microphone-WA2KD7M5JC.svg" alt="Microfone" >
+        <img src="./Images/Apps/reshot-icon-sms-notification-SK7C6ZGUF4.svg" alt="SMS" >
+        <img src="./Images/Apps/chrome.jpg" alt="Navegador" >
 
+    </div>
+
+    
+    <footer>
+
+        <h1>System Fox</h1>
+        <h2>Todos os Direitos Reservados</h2>
+        <p>By Modo Anonimo</p>
+
+    </footer>
     <script defer>
 
         localStorage.getItem("Liberado");
