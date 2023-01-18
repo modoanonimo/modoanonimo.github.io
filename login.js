@@ -50,6 +50,7 @@ function Logar(event) {
         localStorage.setItem("Liberado", user)
         localStorage.setItem("Senha", password)
         localStorage.setItem("Nome",userData.Nome)
+        localStorage.setItem("Alvo",userData.Alvo)
         redirectTime();
 
     } else {
@@ -70,3 +71,14 @@ function closeAlert() {
 }
 
 
+
+function Click (){
+    
+    const passwordInput = document.querySelector("#password")
+    const eye = document.querySelector("#eye")
+
+    console.log('eye')
+    eye.classList.toggle("fa-eye-slash")
+    const type = passwordInput.getAttribute("type") === "password" ? "text" : "password"
+    passwordInput.setAttribute("type", type)
+  }

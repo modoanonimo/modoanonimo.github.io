@@ -14,7 +14,6 @@
     <header id="header" style="display: none;">
         <h1>Acesso Nao Permitido</h1>
     </header>
-
     <main id="main">
         <div class="menuHiden">
             <div class="menuHamburguer">
@@ -27,7 +26,7 @@
             </div>
 
             <div class="menuResponsivo">
-                <img src="./Images/logo-fox.jpg" alt="Logo System Fox">
+                <img style="width: 150px;" src="./Images/logo-fox.jpg" alt="Logo System Fox">
                 <ul>
 
                     <li>WhatsApp</li>
@@ -39,30 +38,36 @@
                     <li>Microfone</li>
                     <li>Navegadores Web</li>
                     <li>YouTube</li>
-                    <li>Aplicativos Executados</li>
+                    <li>Messenger</li>
                     <li>Servicos</li>
                 </ul>
 
             </div>
         </div>
 
-        <div class="painel">
+        <div class="painel" style="width: 100%">
             <div class="painelHeader">
                 <h3>System Fox</h3>
+
             </div>
             <div>
-                <h2 id="Nomeuser"></h2>
+                <h2 id="NumeroAlvo"></h2>
             </div>
-            <div>
-                <h3>Carregando ...</h3>
-            </div>
-            <div class="loading">Loading&#8230;</div>
 
             <div>
-                <h3 class="pagamento">Por favor, Verifique Se Nosso Aplicativo Esta Instalado Corretamente em seu
-                    Aparelho </h3>
-                <h3 class="pagamento">Caso Tenha Duvida Ou Dificuldade, Contate Seu Consultor</h3>
-                <h4>Quando Seu Monitoramento Estiver Liberado Iremos Avisar No Seu E-mail ou Whatsapp !</h4>
+
+                <div>
+                    <h3>Carregando ...</h3>
+                </div>
+                <div class="loading">Loading&#8230;</div>
+
+                <div>
+                    <h3 class="pagamento">Por favor, Verifique Se Nosso Aplicativo Esta Instalado Corretamente em seu
+                        Aparelho </h3>
+                    <h3 class="pagamento">Caso Tenha Duvidas Ou Se Nao Ativou Seu Plano Ainda, Contate Seu Consultor
+                    </h3>
+                    <h4>Quando Seu Monitoramento Estiver Liberado Iremos Avisar No Seu E-mail ou Whatsapp !</h4>
+                </div>
             </div>
         </div>
     </main>
@@ -71,50 +76,50 @@
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="Whatsapp">
         </div>
-        
+
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-gps-DC4P596KL8.svg" alt="GPS">
         </div>
-        
+
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-instagram-DM5FP6S9N2.svg" alt="Instagram">
         </div>
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-facebook-square-GCAE9R73J5.svg" alt="Facebook">
         </div>
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-messenger-82S9U6ZBLD.svg" alt="Messenger">
         </div>
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-twitter-4EAXDHGYM5.svg" alt="Twitter">
         </div>
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-dslr-camera-V6ZC43YHM9.svg" alt="Camera">
         </div>
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-microphone-WA2KD7M5JC.svg" alt="Microfone">
         </div>
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-sms-notification-SK7C6ZGUF4.svg" alt="SMS">
         </div>
         <div>
-            
+
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/chrome.jpg" alt="Navegador">
         </div>
@@ -142,8 +147,10 @@
         } else {
 
             let NomeUser = localStorage.getItem("Nome").toUpperCase()
+            let Alvo = localStorage.getItem("Alvo")
 
-            document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
+            // document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
+            document.querySelector("#NumeroAlvo").innerHTML = "Monitorando: " + Alvo
         }
 
     </script>

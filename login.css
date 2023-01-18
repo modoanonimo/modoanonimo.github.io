@@ -22,7 +22,7 @@ body {
   display: none;
 }
 
-.errorUser h1, h2 , h3{
+.errorUser h1, h2, h3 {
   text-align: center;
   color: rgb(244, 0, 0);
 }
@@ -63,6 +63,30 @@ button a {
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
   border-radius: 10px;
+}
+
+.password-container {
+  position: relative;
+}
+
+.fa-eye {
+  position: absolute;
+  top: 15%;
+  right: 4%;
+  cursor: pointer;
+  color: lightgray;
+  width: 10px;
+  height: 10px;
+}
+
+.fa-solid, .fa-eye-slash {
+  position: absolute;
+  top: 15%;
+  right: 4%;
+  cursor: pointer;
+  color: lightgray;
+  width: 10px;
+  height: 10px;
 }
 
 .login-box h2 {
