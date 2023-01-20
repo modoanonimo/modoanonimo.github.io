@@ -261,12 +261,6 @@ a {
   top: auto;
 }
 
-/* @media screen and (max-width:500px) {
-  .menuHamburguer{
-    display: flex;
-  }
-} */
-
 .painelHeader {
   display: flex;
   background: rgb(0, 0, 0);
@@ -282,14 +276,14 @@ a {
   margin-left: 10px;
 }
 
-.apps{
+.apps {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border: 4px solid black;
 }
 
-.apps img{
+.apps img {
   width: 50px;
   padding: 15px;
   border: 1px solid blue;
@@ -307,19 +301,252 @@ a {
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
 }
+
 .lock:hover {
   opacity: 1;
 }
 
-footer{
+footer {
   background-color: black;
   color: orangered;
 }
 
-footer h2,h1  {
+footer h2, h1 {
   text-align: center;
   margin-top: auto;
 }
+
 footer p {
   text-align: end;
+}
+
+
+
+.bounce {
+  display: flex;
+	margin: 50px;
+	width: 60px;
+	height: 60px;
+	/*background: rgba(221, 51, 51, 0.54);*/
+	border: solid 4px #fff;
+	text-align: center;
+	
+	position: relative;
+	margin-left: -30px;
+	margin-top: 30px;
+}
+
+
+.bounce span {
+
+	display: inline-block;
+	position: relative;
+	/* background: #c0392b; */
+	width: 15px;
+	height: 15px;
+	margin: 0 auto;
+	border-radius: 50%;
+  padding: 10px;
+}
+
+.bounce span:nth-child(1){
+	animation: bounce 2s cubic-bezier(0.21, 3.09, 0.06, 2.34) infinite;
+}
+.bounce span:nth-child(2){
+	animation: bounce 2s cubic-bezier(0.21, 3.09, 0.06, 2.34) infinite 0.5s;
+	
+}
+.bounce span:nth-child(3){
+	animation: bounce 2s cubic-bezier(0.21, 3.09, 0.06, 2.34) infinite 1s;
+	
+}
+.bounce span:nth-child(4){
+	animation: bounce 2s cubic-bezier(0.21, 3.09, 0.06, 2.34) infinite 1.5s;
+	
+}
+.bounce span:nth-child(5){
+	animation: bounce 2s cubic-bezier(0.21, 3.09, 0.06, 2.34) infinite 2s;
+	
+}
+.bounce span:nth-child(6){
+	animation: bounce 2s cubic-bezier(0.21, 3.09, 0.06, 2.34) infinite 2.5s;
+	
+}
+.bounce span:nth-child(7){
+	animation: bounce 2s cubic-bezier(0.21, 3.09, 0.06, 2.34) infinite 3s;
+	
+}
+
+
+@keyframes bounce{
+	0%{
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(6px);
+	}		
+	100%{
+		transform: translateY(0px);
+	}
+}
+
+
+
+
+
+
+
+.mobileSimulator * {
+  /* margin: 0;
+  padding: 0;
+  bottom: 0; */
+  box-sizing: border-box;
+}
+
+.mobileSimulator {
+  display: none;
+}
+
+.backDrop button {
+  border-radius: 10px;
+  height:3vh;
+}
+
+#device {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  border: solid 18px black;
+  border-radius: 40px;
+  margin: 0 auto;
+  box-shadow: 4px 10px 80px;
+  overflow: hidden;
+  transition: .5s;
+  top: 5%;
+  left: 35%;
+  z-index: 1;
+  width: 90%;
+  height: -webkit-fill-available;
+}
+
+#chin {
+  width: 150px;
+  height: 20px;
+  border: solid 20px black;
+  position: relative;
+  top: -30px;
+  border-radius: 30px;
+  z-index: 5;
+  transition: 6s
+}
+
+#device--content {
+  width: 100%;
+  background: #ffffff;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  transition-delay: .2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#device--content h1 {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+#device--content h3 {
+  color: red;
+  background-color: black;
+  font-size: x-large;
+
+}
+
+#device--content img {
+  align-self: center;
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+
+
+
+.phone {
+  width: 300px;
+  height: 600px;
+  transform: translate (0, 0) scale(1) rotate(0deg);
+}
+
+.phone #device--content {
+  transform: translate(0px, -40px) rotate(0deg);
+  width: 100%;
+}
+
+.phoneP {
+  width: 300px;
+  height: 600px;
+  transform: rotate(90deg);
+}
+
+.phoneP #device--content {
+  transform: translate(-20px, -55px) rotate(-90deg);
+  width: 600px;
+}
+
+.tablet {
+  width: 800px;
+  height: 400px;
+  transform: translate (0, 0) scale(0.8);
+}
+
+.tablet #chin {
+  height: 0;
+  border: 0;
+}
+
+.desktop {
+  width: 1200px;
+  height: 900px;
+  transform: translate(-180px, -190px) scale(0.5);
+}
+
+.tv {
+  width: 800px;
+  height: 400px;
+  transform: translate(10px);
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: black;
+  padding: 5px;
+  width: 100%;
+}
+
+.backDrop {
+  width: 100%;
+  height: 100%;
+  background-color: #aeffffd9;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+@media screen and (max-width:500px) {
+
+  #device {
+    top: 5%;
+    left: 5%;
+
+  }
 }

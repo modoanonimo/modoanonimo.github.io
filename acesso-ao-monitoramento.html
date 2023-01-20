@@ -11,10 +11,130 @@
 
 <body>
 
+    <script>
+        function change(devices) {
+            document.getElementById("device").className = devices;
+        }
+
+
+        function closeMobile() {
+            document.querySelector(".mobileSimulator").style.display = "none";
+        }
+
+        function openMobile(className) {
+            document.querySelector(".mobileSimulator").style.display = "flex";
+
+
+            if (className === 'WhatsApp') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg"
+            }
+            else if (className === 'GPS') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-gps-DC4P596KL8.svg"
+            }
+            else if (className === 'Instagram') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-instagram-DM5FP6S9N2.svg"
+            }
+            else if (className === 'Facebook') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-facebook-square-GCAE9R73J5.svg"
+            }
+            else if (className === 'Messenger') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-messenger-82S9U6ZBLD.svg"
+            }
+            else if (className === 'Twitter') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-twitter-4EAXDHGYM5.svg"
+            }
+            else if (className === 'Camera') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-dslr-camera-V6ZC43YHM9.svg"
+            }
+            else if (className === 'Microfone') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-microphone-WA2KD7M5JC.svg"
+            }
+            else if (className === 'SMS') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/reshot-icon-sms-notification-SK7C6ZGUF4.svg"
+            }
+            else if (className === 'Navegador-Web') {
+
+                document.querySelector(".deviceContent").src = "./Images/Apps/chrome.jpg"
+            }
+
+            document.querySelector(".labelImg").innerHTML = className;
+
+        }
+
+
+    </script>
+
     <header id="header" style="display: none;">
         <h1>Acesso Nao Permitido</h1>
     </header>
     <main id="main">
+
+
+        <div class="mobileSimulator">
+            <div class="backDrop">
+
+                <button onclick="closeMobile()" }>Fechar Modulo</button>
+            </div>
+
+            <div id="device" class="phone">
+                <div id="chin"></div>
+                <div id="device--content">
+
+                    <div class="bounce">
+                        <span>L</span>
+                        <span>O</span>
+                        <span>A</span>
+                        <span>D</span>
+                        <span>I</span>
+                        <span>N</span>
+                        <span>G</span>
+
+                    </div>
+                    <div class="loading">Loading&#8230;</div>
+
+                    <h1 for="deviceContent" class="labelImg"> </h1>
+                    <h3>Ative Agora Seu Plano e Comece O Monitoramento</h3>
+
+                        <img name="deviceContent" class="deviceContent"
+                            src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="">
+                </div>
+            </div>
+
+            <!-- <nav>
+                <button onclick="change('phone');">mobile</button>
+                <button onclick="change('phoneP');">mobileP</button>
+                <button onclick="change('tablet');">tablet</button>
+                <button onclick="change('desktop');">desktop</button>
+                <button onclick="change('tv');">tv</button>
+            </nav> -->
+
+        </div>
+
+        <!-- <div class="mobileMock">
+            <div>
+                <h3>Carregando ...</h3>
+            </div>
+            <div class="loading">Loading&#8230;</div>
+
+            <div>
+                <h3 class="pagamento">Por favor, Verifique Se Nosso Aplicativo Esta Instalado Corretamente em seu
+                    Aparelho </h3>
+                <h3 class="pagamento">Caso Tenha Duvidas Ou Se Nao Ativou Seu Plano Ainda, Contate Seu Consultor
+                </h3>
+                <h4>Quando Seu Monitoramento Estiver Liberado Iremos Avisar No Seu E-mail ou Whatsapp !</h4>
+            </div>
+        </div> -->
+
+
         <div class="menuHiden">
             <div class="menuHamburguer">
                 <input type="checkbox" id="checkbox-menu" />
@@ -29,16 +149,16 @@
                 <img style="width: 150px;" src="./Images/logo-fox.jpg" alt="Logo System Fox">
                 <ul>
 
-                    <li>WhatsApp</li>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                    <li>Localizacao</li>
-                    <li>SMS</li>
-                    <li>Camera</li>
-                    <li>Microfone</li>
-                    <li>Navegadores Web</li>
-                    <li>YouTube</li>
-                    <li>Messenger</li>
+                    <li onclick="openMobile('WhatsApp')">WhatsApp</li>
+                    <li onclick="openMobile('Instagram')">Instagram</li>
+                    <li onclick="openMobile('Facebook')">Facebook</li>
+                    <li onclick="openMobile('GPS')">Localizacao</li>
+                    <li onclick="openMobile('SMS')">SMS</li>
+                    <li onclick="openMobile('Camera')">Camera</li>
+                    <li onclick="openMobile('Microfone')">Microfone</li>
+                    <li onclick="openMobile('Navegador-Web')">Navegadores Web</li>
+                    <li onclick="openMobile('Twitter')">Twitter</li>
+                    <li onclick="openMobile('Messenger')">Messenger</li>
                     <li>Servicos</li>
                 </ul>
 
@@ -51,73 +171,61 @@
 
             </div>
             <div>
-                <h2 id="NumeroAlvo"></h2>
+                <h2 id="NumeroAlvo" style="text-align: center;"></h2>
+                <h2 id="NomeAlvo" style="text-align: center;"></h2>
+                <h2 id="CpfAlvo" style="text-align: center;"></h2>
             </div>
 
-            <div>
-                <div>
-                    <h3>Carregando ...</h3>
-                </div>
-                <div class="loading">Loading&#8230;</div>
 
-                <div>
-                    <h3 class="pagamento">Por favor, Verifique Se Nosso Aplicativo Esta Instalado Corretamente em seu
-                        Aparelho </h3>
-                    <h3 class="pagamento">Caso Tenha Duvidas Ou Se Nao Ativou Seu Plano Ainda, Contate Seu Consultor
-                    </h3>
-                    <h4>Quando Seu Monitoramento Estiver Liberado Iremos Avisar No Seu E-mail ou Whatsapp !</h4>
-                </div>
-            </div>
         </div>
     </main>
     <div class="apps">
-        <div>
+        <div onclick="openMobile('WhatsApp')">
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="Whatsapp">
         </div>
 
-        <div>
+        <div onclick="openMobile('GPS')">
 
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-gps-DC4P596KL8.svg" alt="GPS">
         </div>
 
-        <div>
-
+        <div onclick="openMobile('Instagram')">
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-instagram-DM5FP6S9N2.svg" alt="Instagram">
         </div>
-        <div>
+        <div onclick="openMobile('Facebook')">
 
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-facebook-square-GCAE9R73J5.svg" alt="Facebook">
         </div>
-        <div>
+        <div onclick="openMobile('Messenger')">
 
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-messenger-82S9U6ZBLD.svg" alt="Messenger">
         </div>
-        <div>
+        <div onclick="openMobile('Twitter')">
 
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-twitter-4EAXDHGYM5.svg" alt="Twitter">
         </div>
-        <div>
+        <div onclick="openMobile('Camera')">
 
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-dslr-camera-V6ZC43YHM9.svg" alt="Camera">
         </div>
-        <div>
+        <div onclick="openMobile('Microfone')">
 
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-microphone-WA2KD7M5JC.svg" alt="Microfone">
         </div>
-        <div>
+        <div onclick="openMobile('SMS')">
 
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/reshot-icon-sms-notification-SK7C6ZGUF4.svg" alt="SMS">
         </div>
-        <div>
+        <div onclick="openMobile('Navegador-Web')">
 
             <img class="lock" src="./Images/Apps/reshot-icon-open-lock-VE946HQGU3.svg" alt="padlock">
             <img src="./Images/Apps/chrome.jpg" alt="Navegador">
@@ -145,11 +253,16 @@
 
         } else {
 
-            let NomeUser = localStorage.getItem("Nome").toUpperCase()
+            // let NomeUser = localStorage.getItem("Nome").toUpperCase()
             let Alvo = localStorage.getItem("Alvo")
+            let Cpf = localStorage.getItem("Cpf")
+            let NomeAlvo = localStorage.getItem("Nome")
+
 
             // document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
             document.querySelector("#NumeroAlvo").innerHTML = "Monitorando: " + Alvo
+            document.querySelector("#NomeAlvo").innerHTML = NomeAlvo ? "Nome: " + NomeAlvo : ""
+            document.querySelector("#CpfAlvo").innerHTML = Cpf ? "Cpf: " + Cpf : ""
         }
 
     </script>
