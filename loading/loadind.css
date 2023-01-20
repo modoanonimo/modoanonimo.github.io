@@ -445,7 +445,7 @@ footer p {
   width: 100%;
   background: #ffffff;
   height: 100%;
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   transition: .5s;
@@ -454,6 +454,7 @@ footer p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
 }
 
 #device--content h1 {
@@ -484,7 +485,6 @@ footer p {
 }
 
 .phone #device--content {
-  transform: translate(0px, -40px) rotate(0deg);
   width: 100%;
 }
 

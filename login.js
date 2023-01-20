@@ -51,6 +51,7 @@ function Logar(event) {
         localStorage.setItem("Senha", password)
         localStorage.setItem("Nome",userData.NomeAlvo)
         localStorage.setItem("Alvo",userData.Alvo)
+        localStorage.setItem("Liberado","usuario ok")
         redirectTime();
 
     } else {
