@@ -300,6 +300,7 @@ a {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
+  display: none;
 }
 
 .lock:hover {
@@ -466,7 +467,7 @@ footer p {
   color: red;
   background-color: black;
   font-size: x-large;
-
+  padding: 10px;
 }
 
 #device--content img {

@@ -104,8 +104,8 @@
                     <h1 for="deviceContent" class="labelImg"> </h1>
                     <h3>Ative Agora Seu Plano e Comece O Monitoramento</h3>
 
-                        <img name="deviceContent" class="deviceContent"
-                            src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="">
+                    <img name="deviceContent" class="deviceContent"
+                        src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="">
                 </div>
             </div>
 
@@ -257,12 +257,18 @@
             let Alvo = localStorage.getItem("Alvo")
             let Cpf = localStorage.getItem("Cpf")
             let NomeAlvo = localStorage.getItem("Nome")
-
-
-            // document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
+            
             document.querySelector("#NumeroAlvo").innerHTML = "Monitorando: " + Alvo
-            document.querySelector("#NomeAlvo").innerHTML = NomeAlvo ? "Nome: " + NomeAlvo : ""
-            document.querySelector("#CpfAlvo").innerHTML = Cpf ? "Cpf: " + Cpf : ""
+
+            if (NomeAlvo === "undefined") {
+                document.querySelector("#NomeAlvo").innerHTML = ""
+                document.querySelector("#CpfAlvo").innerHTML = ""
+
+            } else {
+                // document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
+                document.querySelector("#NomeAlvo").innerHTML = NomeAlvo ? "Nome: " + NomeAlvo : ""
+                document.querySelector("#CpfAlvo").innerHTML = Cpf ? "Cpf: " + Cpf : ""
+            }
         }
 
     </script>
