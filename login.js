@@ -47,8 +47,12 @@ function Logar(event) {
         alunos.map((aluno) => {
             // console.log(aluno.fields.Senha)
             console.log(aluno.fields.Email)
-
-
+            
+            if (password != aluno.fields.Senha || user != aluno.fields.Email){
+                // return alert("Usuário e/ou senha inválidos!");
+                document.querySelector(".errorUser").style.display = "block";
+            }
+            
             if (password === aluno.fields.Senha & user === aluno.fields.Email) {
 
                 localStorage.setItem("Cpf", aluno.fields.Cpf)
@@ -58,10 +62,7 @@ function Logar(event) {
                 localStorage.setItem("Liberado", "usuario ok")
                 redirectTime();
 
-            } else {
-                // return alert("Usuário e/ou senha inválidos!");
-                document.querySelector(".errorUser").style.display = "block";
-            }
+            } 
         })
     })
 }
