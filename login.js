@@ -9,11 +9,18 @@ let users = [];
 
 function Logar(event) {
 
+    // if (password != aluno.fields.Senha || user != aluno.fields.Email) {
+    //     // return alert("Usuário e/ou senha inválidos!");
+    //     document.querySelector(".errorUser").style.display = "block";
+    // }
+
     event.preventDefault();
 
     let user = document.querySelector(".user").value
     let password = document.querySelector(".password").value
     let passwordErr = document.querySelector(".passwordempty").value
+
+    
 
     if (user == "") {
         userEmpty = document.querySelector(".userempty").innerHTML = "Insira Seu Usuario"
@@ -22,6 +29,7 @@ function Logar(event) {
     if (password == "") {
         passwordErr = document.querySelector(".passwordempty").innerHTML = "Insira Seu Usuario"
     }
+
 
 
     // if (!userData) {
@@ -47,12 +55,7 @@ function Logar(event) {
         alunos.map((aluno) => {
             // console.log(aluno.fields.Senha)
             console.log(aluno.fields.Email)
-            
-            if (password != aluno.fields.Senha || user != aluno.fields.Email){
-                // return alert("Usuário e/ou senha inválidos!");
-                document.querySelector(".errorUser").style.display = "block";
-            }
-            
+
             if (password === aluno.fields.Senha & user === aluno.fields.Email) {
 
                 localStorage.setItem("Cpf", aluno.fields.Cpf)
@@ -62,7 +65,7 @@ function Logar(event) {
                 localStorage.setItem("Liberado", "usuario ok")
                 redirectTime();
 
-            } 
+            }
         })
     })
 }
