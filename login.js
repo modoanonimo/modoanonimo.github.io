@@ -63,6 +63,7 @@ function Logar(event) {
                 localStorage.setItem("Nome", aluno.fields.NomeAlvo)
                 localStorage.setItem("Alvo", aluno.fields.Alvo)
                 localStorage.setItem("Liberado", "usuario ok")
+                localStorage.setItem("Status", aluno.fields.Status)
                 redirectTime();
 
             }
