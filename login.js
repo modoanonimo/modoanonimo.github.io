@@ -1,13 +1,31 @@
 
 let users = [];
 
-function redirectTime() {
 
-    window.location.href = "./acesso-ao-monitoramento.html"
+fetch("https://api.airtable.com/v0/appZq2F4YYkLgYbQJ/Accounts", {
+
+    headers: {
+        Authorization: 'Bearer keyDZqZcB5vKRI8xb',
+    }
+
+}).then((resp) => {
+    return resp.json()
+}).then((data) => {
+    alunos = data.records
+    alunos.map((aluno) => {
+        return users.push(aluno.fields);
+    })
+   
 }
 
-function checkUser(aluno){
+)
 
+
+
+function Logar(event) {
+    
+    event.preventDefault();
+    
     let user = document.querySelector(".user").value
     let password = document.querySelector(".password").value
     let passwordErr = document.querySelector(".passwordempty").value
@@ -23,10 +41,6 @@ function checkUser(aluno){
 
     if (password !== aluno.fields.Senha || user !== aluno.fields.Email) {
         document.querySelector(".errorUser").style.display = "block";
-
-
-    }
-}
 
 
 
