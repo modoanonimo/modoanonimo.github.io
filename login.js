@@ -2,34 +2,25 @@
 let users = [];
 
 
-fetch("https://api.airtable.com/v0/appZq2F4YYkLgYbQJ/Accounts", {
 
-    headers: {
-        Authorization: 'Bearer keyDZqZcB5vKRI8xb',
-    }
 
-}).then((resp) => {
-    return resp.json()
-}).then((data) => {
-    alunos = data.records
-    alunos.map((aluno) => {
-        return users.push(aluno.fields);
-    })
-   
-}
-
-)
 
 
 
 function Logar(event) {
-    
+
+    // if (password != aluno.fields.Senha || user != aluno.fields.Email) {
+    //     // return alert("Usuário e/ou senha inválidos!");
+    //     document.querySelector(".errorUser").style.display = "block";
+    // }
+
     event.preventDefault();
-    
+
     let user = document.querySelector(".user").value
     let password = document.querySelector(".password").value
     let passwordErr = document.querySelector(".passwordempty").value
 
+    
 
     if (user == "") {
         userEmpty = document.querySelector(".userempty").innerHTML = "Insira Seu Usuario"
@@ -39,31 +30,16 @@ function Logar(event) {
         passwordErr = document.querySelector(".passwordempty").innerHTML = "Insira Seu Usuario"
     }
 
-    if (password !== aluno.fields.Senha || user !== aluno.fields.Email) {
-        document.querySelector(".errorUser").style.display = "block";
-
-
-
-
-
-function Logar(event) {
-
-    
-
-    event.preventDefault();
-
-    let user = document.querySelector(".user").value
-    let password = document.querySelector(".password").value
-    let passwordErr = document.querySelector(".passwordempty").value
 
 
     // if (!userData) {
     //     // return alert("Usuário e/ou senha inválidos!");
     //     document.querySelector(".errorUser").style.display = "block";
     // }
+    function redirectTime() {
 
-
-    
+        window.location.href = "./acesso-ao-monitoramento.html"
+    }
 
     fetch("https://api.airtable.com/v0/appZq2F4YYkLgYbQJ/Accounts", {
 
@@ -76,11 +52,9 @@ function Logar(event) {
     }).then((data) => {
 
         alunos = data.records
-        alunos.map( (aluno) => {
+        alunos.map((aluno) => {
             // console.log(aluno.fields.Senha)
             console.log(aluno.fields.Email)
-
-            checkUser(aluno);
 
             if (password === aluno.fields.Senha & user === aluno.fields.Email) {
 
@@ -88,15 +62,13 @@ function Logar(event) {
                 localStorage.setItem("Senha", password)
                 localStorage.setItem("Nome", aluno.fields.NomeAlvo)
                 localStorage.setItem("Alvo", aluno.fields.Alvo)
-                localStorage.setItem("Status", aluno.fields.Status)
                 localStorage.setItem("Liberado", "usuario ok")
+                localStorage.setItem("Status", aluno.fields.Status)
                 redirectTime();
 
             }
-        }
-        )
-    }
-    )
+        })
+    })
 }
 
 
