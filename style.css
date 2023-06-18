@@ -48,15 +48,16 @@ header ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
 
 }
 
 h2 {
     font-weight: bold;
-    color: darkorange;
+    color: #4fca14;
     background-color: black;
     padding: 2px;
+    text-align: center;
 }
 
 body {
@@ -237,7 +238,7 @@ footer {
 @media screen and (max-width: 750px) {
 
     .logoDiv {
-        flex-direction: row;
+      
         border: 5px solid white;
     }
 
@@ -246,7 +247,7 @@ footer {
     }
 
     .logoDiv img {
-        width: 100px;
+        width: 100%;
     }
 
     .logoDiv h3 {

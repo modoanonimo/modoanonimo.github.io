@@ -2,6 +2,11 @@ body {
   margin: auto;
 }
 
+.Status1, .Status11, .Status2 ,.Status22 , .Status3,.Status33, .Status333 {
+  display: none;
+}
+
+
 h1, h3, h5 {
   text-align: center;
 }

@@ -90,13 +90,24 @@
                 <div id="device--content">
 
                     <div>
-                       <h2>Buscando Conexão</h2>
+                        <h2>Buscando Conexão</h2>
                     </div>
-                    
+
                     <div class="loading">Loading&#8230;</div>
 
                     <h1 for="deviceContent" class="labelImg"> </h1>
-                    <h3>Ative Agora Seu Plano e Comece O Monitoramento</h3>
+                    <h3 class="Status1">Instale o Aplicativo</h3>
+                    <h3 class="Status11">Ative Um Plano</h3>
+
+                    <h3 class="Status2">Aplicativo Instalado</h3>
+                    <h3 class="Status22">Ative Um Plano</h3>
+
+
+                    <h3 class="Status3">Aplicativo Instalado</h3>
+                    <h3 class="Status33">Plano Ativado</h3>
+                    <h3 class="Status333">Realizando Download</h3>
+
+
 
                     <img name="deviceContent" class="deviceContent"
                         src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="">
@@ -251,7 +262,8 @@
             let Alvo = localStorage.getItem("Alvo")
             let Cpf = localStorage.getItem("Cpf")
             let NomeAlvo = localStorage.getItem("Nome")
-            
+            let Status = localStorage.getItem("Status")
+
             document.querySelector("#NumeroAlvo").innerHTML = "Monitorando: " + Alvo
 
             if (NomeAlvo === "undefined") {
@@ -262,6 +274,23 @@
                 // document.querySelector("#Nomeuser").innerHTML = "Ola, " + NomeUser
                 document.querySelector("#NomeAlvo").innerHTML = NomeAlvo ? "Nome: " + NomeAlvo : ""
                 document.querySelector("#CpfAlvo").innerHTML = Cpf ? "Cpf: " + Cpf : ""
+            }
+
+
+            if (Status === "1") {
+                document.querySelector(".Status1").style.display = "block"
+                document.querySelector(".Status11").style.display = "block"
+            }
+
+            if (Status === "2") {
+                document.querySelector(".Status2").style.display = "block"
+                document.querySelector(".Status22").style.display = "block"
+            }
+
+            if (Status === "3") {
+                document.querySelector(".Status3").style.display = "block"
+                document.querySelector(".Status33").style.display = "block"
+                document.querySelector(".Status333").style.display = "block"
             }
         }
 
