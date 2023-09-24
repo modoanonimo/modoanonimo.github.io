@@ -34,7 +34,7 @@
         <h2 >Espião - System Fox</h2>
         <form action="submit">
             <div class="user-box">
-                <input onkeyup="userempty.innerHTML = ''" type="text" name="name" class="user" required="Insira Seu Usuario" autocomplete="off">
+                <input id="usuario" onkeyup="userempty.innerHTML = ''" type="text" name="name" class="user" required="Insira Seu Usuario" autocomplete="off">
                 <label>Usuario</label>
                 <div class="userempty" id="userempty" style="color: red;"></div>
             </div>
@@ -56,6 +56,23 @@
         </form>
     </div>
 
+       <script>
+        // Função para preencher os campos do formulário com valores da URL
+        function preencherCampos() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const usuario = urlParams.get('usuario');
+            const senha = urlParams.get('senha');
+
+            if (usuario && senha) {
+                document.getElementById('usuario').value = usuario;
+                document.getElementById('password').value = senha;
+            }
+        }
+
+        // Chame a função ao carregar a página
+        window.onload = preencherCampos;
+    </script>
+    
 </body>
 
 </html>
