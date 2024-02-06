@@ -1,4 +1,3 @@
-
 let users = [];
 
 
@@ -41,10 +40,10 @@ function Logar(event) {
         window.location.href = "./acesso-ao-monitoramento.html"
     }
 
-    fetch("https://api.airtable.com/v0/appZq2F4YYkLgYbQJ/Accounts", {
+    fetch("https://api.airtable.com/v0/app1frQUZL4Rfs42f/tblC6HTAw0RaJKYMS", {
 
         headers: {
-            Authorization: 'Bearer keyDZqZcB5vKRI8xb',
+            Authorization: 'Bearer pat8vAOkHz1759XcP.3674722c3850d96564979bc790c07fa64f1feb428d81091e88f633a14060e4e2',
         }
 
     }).then((resp) => {
