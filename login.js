@@ -40,10 +40,10 @@ function Logar(event) {
         window.location.href = "./acesso-ao-monitoramento.html"
     }
 
-    fetch("https://api.airtable.com/v0/app1frQUZL4Rfs42f/tblC6HTAw0RaJKYMS", {
+    fetch("https://api.airtable.com/v0/appZq2F4YYkLgYbQJ/tbllX5QGYjGsBqaRO", {
 
         headers: {
-            Authorization: 'Bearer pat8vAOkHz1759XcP.3674722c3850d96564979bc790c07fa64f1feb428d81091e88f633a14060e4e2',
+            Authorization: 'Bearer pat8vAOkHz1759XcP.eb54e014dda14c11b0c0b939573fda7154c7737bc006660e2b7113182b27d8ed',
         }
 
     }).then((resp) => {
