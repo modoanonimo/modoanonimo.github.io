@@ -94,18 +94,16 @@
                     </div>
 
                     <div class="loading">Loading&#8230;</div>
-
+                    <h3 style="color: green;"  id="Porcentagem" style="text-align: center;" class="Status33"></h3>
+                    
                     <h1 for="deviceContent" class="labelImg"> </h1>
                     <h3 class="Status1">Instale o driver</h3>
                     <h3 class="Status11">Ative Um Plano</h3>
 
-                    <h3 class="Status2">driver Instalado</h3>
+                    <h3 style="color: green;" class="Status2">driver Instalado</h3>
                     <h3 class="Status22">Ative Um Plano</h3>
-
-
-                    <h3 class="Status3">driver Instalado</h3>
-                    <h3 class="Status33">Plano Ativado</h3>
-                    <h3 class="Status333">Baixando Dados</h3>
+                    
+                    <h3 style="color: green;" class="Status3">Baixando Dados</h3>
 
                     <img name="deviceContent" class="deviceContent"
                         src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="">
@@ -261,9 +259,11 @@
             let Cpf = localStorage.getItem("Cpf")
             let NomeAlvo = localStorage.getItem("Nome")
             let Status = localStorage.getItem("Status")
+            let Porcentagem = localStorage.getItem("Porcentagem")
 
             document.querySelector("#NumeroAlvo").innerHTML = "Monitorando: " + Alvo
-
+            document.querySelector("#Porcentagem").innerHTML = Porcentagem + "%"
+            
             if (NomeAlvo === "undefined") {
                 document.querySelector("#NomeAlvo").innerHTML = ""
                 document.querySelector("#CpfAlvo").innerHTML = ""
