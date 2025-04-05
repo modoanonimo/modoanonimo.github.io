@@ -63,7 +63,7 @@ function Logar(event) {
                 localStorage.setItem("Alvo", aluno.fields.Alvo)
                 localStorage.setItem("Liberado", "usuario ok")
                 localStorage.setItem("Status", aluno.fields.Status)
-                localStorage.setItem("Status", aluno.fields.Porcentagem)
+                localStorage.setItem("Porcentagem", aluno.fields.Porcentagem)
                 redirectTime();
 
             }
