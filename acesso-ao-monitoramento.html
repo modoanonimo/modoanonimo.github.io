@@ -11,6 +11,8 @@
 
 <body>
 
+    
+
     <script>
         function change(devices) {
             document.getElementById("device").className = devices;
@@ -105,7 +107,7 @@
                     <h3 class="Status22">Ative Um Plano</h3>
                     
                     <h3 style="color: green;" class="Status3">Baixando Dados</h3>
-                    <h3 style="color: green;"  id="Porcentagem" style="text-align: center;" class="Status33"></h3>
+                    <h3 style="color: green;"  id="Porcentagem" style="text-align: center;" class="Status33 bounce"></h3>
 
                     <img name="deviceContent" class="deviceContent"
                         src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="">
@@ -245,6 +247,24 @@
         <p>By Modo Anonimo</p>
 
     </footer>
+
+    <style>
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+  color: green;
+  text-align: center;
+}
+</style>
     <script defer>
 
         if (!localStorage.getItem('Liberado')) {
