@@ -107,7 +107,7 @@
                     <h3 class="Status22">Ative Um Plano</h3>
                     
                     <h3 style="color: green;" class="Status3">Baixando Dados</h3>
-                    <h3 style="color: green;"  id="Porcentagem" style="text-align: center;" class="Status33 bounce"></h3>
+                    <h3 style="color: green;"  id="Porcentagem" style="text-align: center;" class="Status33 pulse"></h3>
 
                     <img name="deviceContent" class="deviceContent"
                         src="./Images/Apps/reshot-icon-whatsapp-UANBKF398R.svg" alt="">
@@ -248,19 +248,23 @@
 
     </footer>
 
-    <style>
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+<style>
+@keyframes pulse {
+  0% {
+    transform: scale(1);
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
-.bounce {
-  animation: bounce 1s infinite;
+.pulse {
+  animation: pulse 1s infinite;
   color: green;
   text-align: center;
 }
